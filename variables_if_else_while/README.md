@@ -20,3 +20,4 @@ Mila F. Abdullah
 | `6-print_numberz.c` | Prints single digit numbers of base 10 using putchar and no char variable |
 | `7-print_tebahpla.c` | Prints the lowercase alphabet in reverse using putchar |
 | `8-print_base16.c` | Prints all the numbers of base 16 in lowercase using putchar |
+| `9-print_comb.c` | Prints all possible combinations of single-digit numbers separated by a comma and a space |
