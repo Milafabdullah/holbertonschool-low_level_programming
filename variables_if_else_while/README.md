@@ -13,3 +13,4 @@ This project covers variables, conditions (`if`, `else`) and loops (`while`) in 
 ## Author
 
 Mila F. Abdullah
+| `2-print_alphabet.c` | Prints the lowercase alphabet using putchar |
