@@ -12,3 +12,4 @@ This project covers more functions and nested loops in C, using only _putchar fo
 ## Author
 
 Mila F. Abdullah
+| 1-isdigit.c | Function that checks for a digit (0 through 9) |
