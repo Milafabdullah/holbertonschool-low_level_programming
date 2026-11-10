@@ -11,3 +11,4 @@ Exercises on tracing code and fixing logic bugs.
 ## Author
 
 Mila F. Abdullah
+| multiplication_table.c | Fixed nested loops that print a multiplication table |
