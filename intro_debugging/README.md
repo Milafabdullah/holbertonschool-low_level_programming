@@ -13,3 +13,4 @@ Exercises on tracing code and fixing logic bugs.
 Mila F. Abdullah
 | multiplication_table.c | Fixed nested loops that print a multiplication table |
 | row_sums.c | Fixed accumulation bug so the total of a multiplication table is correct |
+| row_sums.c | Fixed accumulation bug so the total of a multiplication table is correct |
