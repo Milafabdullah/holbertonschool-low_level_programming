@@ -16,3 +16,4 @@ Mila F. Abdullah
 | 2-print_alphabet_x10.c | Function that prints the lowercase alphabet 10 times, each followed by a new line |
 | 3-islower.c | Function that checks for a lowercase character |
 | 4-isalpha.c | Function that checks for an alphabetic character |
+| 5-sign.c | Function that prints the sign of a number |
