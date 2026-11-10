@@ -12,3 +12,4 @@ This project covers writing functions, header files and nested loops in C, using
 ## Author
 
 Mila F. Abdullah
+| 1-alphabet.c | Function that prints the lowercase alphabet followed by a new line |
