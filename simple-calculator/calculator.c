@@ -50,8 +50,28 @@ static int read_number(const char *prompt, int *value)
 }
 
 /**
+ * calculate - Applies an arithmetic operation to two numbers
+ * @choice: The menu choice (1 adds, 2 subtracts, 3 multiplies)
+ * @a: The first number
+ * @b: The second number
+ *
+ * Return: The result, computed as a long so it does not overflow
+ */
+static long calculate(int choice, int a, int b)
+{
+	if (choice == 1)
+		return ((long)a + b);
+	if (choice == 2)
+		return ((long)a - b);
+	if (choice == 3)
+		return ((long)a * b);
+
+	return (0);
+}
+
+/**
  * run_operation - Asks for two numbers and prints the result of an operation
- * @choice: The menu choice (1 adds, 2 subtracts)
+ * @choice: The menu choice (1 adds, 2 subtracts, 3 multiplies)
  *
  * Return: EOF if the input ended, 0 otherwise
  */
@@ -71,10 +91,8 @@ static int run_operation(int choice)
 
 	if (status != 1)
 		printf("Invalid input\n");
-	else if (choice == 1)
-		printf("Result: %d\n", a + b);
-	else if (choice == 2)
-		printf("Result: %d\n", a - b);
+	else
+		printf("Result: %ld\n", calculate(choice, a, b));
 
 	return (0);
 }
@@ -102,12 +120,12 @@ int main(void)
 
 		if (result != 1)
 			printf("Invalid choice\n");
-		else if (choice == 1 || choice == 2)
+		else if (choice >= 1 && choice <= 3)
 		{
 			if (run_operation(choice) == EOF)
 				break;
 		}
-		else if (choice == 3 || choice == 4)
+		else if (choice == 4)
 			printf("Not implemented yet\n");
 		else if (choice != 0)
 			printf("Invalid choice\n");
