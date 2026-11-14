@@ -6,7 +6,7 @@ A small command-line calculator written in C, built step by step.
 
 | File | Description |
 |------|-------------|
-| calculator.c | Menu loop with choice validation, quits with option 0 |
+| calculator.c | Menu loop with choice validation and working addition |
 
 ## Compilation
 Milaf

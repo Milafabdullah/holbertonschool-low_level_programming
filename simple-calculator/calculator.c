@@ -30,6 +30,53 @@ static void discard_line(void)
 }
 
 /**
+ * read_number - Prompts for an integer and reads it
+ * @prompt: The text to display before reading
+ * @value: Pointer to the variable that receives the number
+ *
+ * Return: 1 if a number was read, 0 if the input was not a number,
+ * EOF if there is no more input
+ */
+static int read_number(const char *prompt, int *value)
+{
+	int result;
+
+	printf("%s", prompt);
+	result = scanf("%d", value);
+	if (result != EOF)
+		discard_line();
+
+	return (result);
+}
+
+/**
+ * run_addition - Asks for two numbers and prints their sum
+ *
+ * Return: EOF if the input ended, 0 otherwise
+ */
+static int run_addition(void)
+{
+	int a;
+	int b;
+	int status;
+
+	a = 0;
+	b = 0;
+	status = read_number("A: ", &a);
+	if (status == 1)
+		status = read_number("B: ", &b);
+	if (status == EOF)
+		return (EOF);
+
+	if (status != 1)
+		printf("Invalid input\n");
+	else
+		printf("Result: %d\n", a + b);
+
+	return (0);
+}
+
+/**
  * main - Entry point of the simple calculator
  *
  * Return: Always 0 (Success)
@@ -52,7 +99,12 @@ int main(void)
 
 		if (result != 1)
 			printf("Invalid choice\n");
-		else if (choice >= 1 && choice <= 4)
+		else if (choice == 1)
+		{
+			if (run_addition() == EOF)
+				break;
+		}
+		else if (choice >= 2 && choice <= 4)
 			printf("Not implemented yet\n");
 		else if (choice != 0)
 			printf("Invalid choice\n");
