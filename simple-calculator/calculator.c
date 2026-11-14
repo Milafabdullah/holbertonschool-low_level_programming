@@ -16,6 +16,20 @@ static void print_menu(void)
 }
 
 /**
+ * discard_line - Discards the rest of the current input line
+ *
+ * Return: void
+ */
+static void discard_line(void)
+{
+	int c;
+
+	c = getchar();
+	while (c != '\n' && c != EOF)
+		c = getchar();
+}
+
+/**
  * main - Entry point of the simple calculator
  *
  * Return: Always 0 (Success)
@@ -23,6 +37,7 @@ static void print_menu(void)
 int main(void)
 {
 	int choice;
+	int result;
 
 	choice = -1;
 	printf("Simple Calculator\n");
@@ -30,9 +45,14 @@ int main(void)
 	while (choice != 0)
 	{
 		print_menu();
-		if (scanf("%d", &choice) != 1)
+		result = scanf("%d", &choice);
+		if (result == EOF)
 			break;
-		if (choice >= 1 && choice <= 4)
+		discard_line();
+
+		if (result != 1)
+			printf("Invalid choice\n");
+		else if (choice >= 1 && choice <= 4)
 			printf("Not implemented yet\n");
 		else if (choice != 0)
 			printf("Invalid choice\n");
