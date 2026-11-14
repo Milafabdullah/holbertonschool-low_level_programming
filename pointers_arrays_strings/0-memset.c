@@ -2,9 +2,9 @@
 
 /**
  * _memset - Fills memory with a constant byte
- * @s: Pointer to the memory area
- * @b: Constant byte to fill with
- * @n: Number of bytes to fill
+ * @s: The memory area to fill
+ * @b: The constant byte to write
+ * @n: The number of bytes to fill
  *
  * Return: A pointer to the memory area s
  */

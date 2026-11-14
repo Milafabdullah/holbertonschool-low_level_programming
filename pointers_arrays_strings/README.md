@@ -12,3 +12,5 @@ This project covers pointers, arrays and strings in C.
 ## Author
 
 Mila F. Abdullah
+| 0-strcat.c | Function that concatenates two strings |
+| 0-memset.c | Function that fills memory with a constant byte |
