@@ -50,11 +50,12 @@ static int read_number(const char *prompt, int *value)
 }
 
 /**
- * run_addition - Asks for two numbers and prints their sum
+ * run_operation - Asks for two numbers and prints the result of an operation
+ * @choice: The menu choice (1 adds, 2 subtracts)
  *
  * Return: EOF if the input ended, 0 otherwise
  */
-static int run_addition(void)
+static int run_operation(int choice)
 {
 	int a;
 	int b;
@@ -70,8 +71,10 @@ static int run_addition(void)
 
 	if (status != 1)
 		printf("Invalid input\n");
-	else
+	else if (choice == 1)
 		printf("Result: %d\n", a + b);
+	else if (choice == 2)
+		printf("Result: %d\n", a - b);
 
 	return (0);
 }
@@ -99,12 +102,12 @@ int main(void)
 
 		if (result != 1)
 			printf("Invalid choice\n");
-		else if (choice == 1)
+		else if (choice == 1 || choice == 2)
 		{
-			if (run_addition() == EOF)
+			if (run_operation(choice) == EOF)
 				break;
 		}
-		else if (choice >= 2 && choice <= 4)
+		else if (choice == 3 || choice == 4)
 			printf("Not implemented yet\n");
 		else if (choice != 0)
 			printf("Invalid choice\n");
