@@ -12,3 +12,4 @@ This project covers dynamic memory in C with malloc and free.
 ## Author
 
 Mila F. Abdullah
+| 4-free_grid.c | Function that frees a 2 dimensional grid created by alloc_grid |
