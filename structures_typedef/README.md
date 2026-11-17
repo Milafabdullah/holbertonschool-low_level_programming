@@ -11,3 +11,4 @@ This project covers structures and typedef in C.
 ## Author
 
 Mila F. Abdullah
+| 1-init_dog.c | Function that initializes a variable of type struct dog |
