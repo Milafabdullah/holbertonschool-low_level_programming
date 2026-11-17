@@ -3,9 +3,10 @@
 
 /**
  * malloc_checked - Allocates memory using malloc
- * @b: Number of bytes to allocate
+ * @b: The number of bytes to allocate
  *
- * Return: A pointer to the allocated memory
+ * Return: A pointer to the allocated memory. If malloc fails, the process
+ * terminates with a status value of 98
  */
 void *malloc_checked(unsigned int b)
 {
